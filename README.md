@@ -1,0 +1,2 @@
+![](https://psv4.userapi.com/c537232/u324708690/docs/d22/4b5ad1fdabbd/Blank_diagram.png?extra=zWFPRUHn4iVPhuRwvSrgJ6rMpxHPOAeuM37jnYrarFWJAnJSjhlQhGE6A3QciVaX9s5kyF_hnIxy_R8mPhCAMEvTw4udVUl6hNSSenw3SHGMiMTcDaH-WZBBrjZs2b6XIUYP1mXt6Hi79546x6rEEZy_uBD0)
+![](https://psv4.userapi.com/c537232/u324708690/docs/d16/37b58d90444f/Blank_diagram_1.png?extra=gec2lnCOcYqob1MTCYz2la-wEM9tSEYNen-JhkOEbfC5E6U1t05zMHicJitW_1KcoLS73C0Wk87fe_NJNqvtaXDIrQpS3ZbbPEO1GaCInon3_TdaLqhr5qM1Kdro_f6WDfJ1Hga9ak3nKHzrYxj-mb_vcYH7)
