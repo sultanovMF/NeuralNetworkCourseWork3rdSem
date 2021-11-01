@@ -28,7 +28,7 @@ topology = [
     TanhMSEOutput()
 ]
 
-epochs = 100
+epochs = 1000
 learning_rate = 0.05
 
 network = Network(topology)

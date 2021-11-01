@@ -9,21 +9,20 @@ from activations import Tanh, Sigmoid
 from outputs import SigmoidMSEOutput
 from network import Network
 
-def preprocess_data(x, y, limit):
-    zero_index = np.where(y == 0)[0][:limit]
-    one_index = np.where(y == 1)[0][:limit]
-    all_indices = np.hstack((zero_index, one_index))
-    all_indices = np.random.permutation(all_indices)
-    x, y = x[all_indices], y[all_indices]
-    x = x.reshape(len(x), 1, 28, 28)
-    x = x.astype("float32") / 255
-    y = np_utils.to_categorical(y)
-    y = y.reshape(len(y), 2, 1)
-    return x, y
-
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-x_train, y_train = preprocess_data(x_train, y_train, 100)
-x_test, y_test = preprocess_data(x_test, y_test, 100)
+
+x_train = x_train.reshape(x_train.shape[0], 28 * 28, 1)
+x_train = x_train.astype('float32')
+x_train /= 255
+
+y_train = np_utils.to_categorical(y_train)
+y_train = y_train.reshape(y_train.shape[0], 10, 1)
+
+x_test = x_test.reshape(x_test.shape[0], 28 * 28, 1)
+x_test = x_test.astype('float32')
+x_test /= 255
+y_test = np_utils.to_categorical(y_test)
+y_test = y_test.reshape(y_test.shape[0], 10, 1)
 
 topology = [
     Convolutional((1, 28, 28), 3, 5),
@@ -35,9 +34,9 @@ topology = [
     SigmoidMSEOutput()
 ]
 
-epochs = 20
-learning_rate = 0.1
+epochs = 1000
+learning_rate = 0.05
 
 network = Network(topology)
-network.train(x_train, y_train, epochs, learning_rate)
-network.test(x_test, y_test)
+network.train(x_train[:1000], y_train[:1000], epochs, learning_rate)
+network.test(x_test[0:100], y_test[0:100])
