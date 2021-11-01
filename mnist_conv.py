@@ -25,7 +25,6 @@ def preprocess_data(x, y, limit):
 x_train, y_train = preprocess_data(x_train, y_train, 100)
 x_test, y_test = preprocess_data(x_test, y_test, 100)
 
-# neural network
 topology = [
     Convolutional((1, 28, 28), 3, 5),
     Sigmoid(),
